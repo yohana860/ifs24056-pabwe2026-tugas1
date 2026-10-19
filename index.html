@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyTask</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>StudyTask</h1>
+    <p class="subtitle">Catat tugas kuliahmu, centang kalau sudah selesai.</p>
+
+    <form id="task-form">
+      <input id="task-input" type="text" placeholder="Tulis tugas kuliah..." autocomplete="off" required>
+      <button type="submit">Tambah</button>
+    </form>
+
+    <nav class="filters" aria-label="Filter tugas">
+      <button data-filter="all" class="active">Semua</button>
+      <button data-filter="active">Aktif</button>
+      <button data-filter="done">Selesai</button>
+    </nav>
+
+    <ul id="task-list"></ul>
+    <p id="counter"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "ifs24056-pabwe2026-tugas1",
+  "version": "1.0.0",
+  "description": "StudyTask - aplikasi web pencatat tugas kuliah (JavaScript murni), Tugas I PABWE",
+  "scripts": {
+    "start": "npx --yes serve . -l 3000"
+  },
+  "license": "ISC"
+}

@@ -1,0 +1,159 @@
+:root {
+  --bg: #e8eef5;
+  --paper: #ffffff;
+  --ink: #14213d;
+  --muted: #5c6b82;
+  --line: #c9d4e3;
+  --accent: #2d5bff;
+  --highlight: #ffe66d;
+  --danger: #c62828;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 3rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0.25rem 0 1.5rem;
+  color: var(--muted);
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  min-width: 0;
+  padding: 0.7rem 0.85rem;
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+}
+
+input[type="text"]:focus-visible,
+button:focus-visible,
+input[type="checkbox"]:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+button {
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 6px;
+  background: var(--ink);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover { background: #26375f; }
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.25rem 0 0.75rem;
+}
+
+.filters button {
+  padding: 0.4rem 0.9rem;
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--line);
+}
+
+.filters button.active {
+  background: var(--highlight);
+  border-color: var(--highlight);
+  font-weight: 600;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: var(--paper);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+li:last-child { border-bottom: 0; }
+
+li span {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+li.done span {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--accent);
+}
+
+li input[type="checkbox"] {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--accent);
+}
+
+li button {
+  padding: 0.3rem 0.65rem;
+  background: transparent;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  font-size: 0.875rem;
+}
+
+li button:hover {
+  background: var(--danger);
+  color: #fff;
+}
+
+ul:empty::before {
+  content: "Belum ada tugas yang tampil. Tambahkan satu di atas.";
+  display: block;
+  padding: 1.25rem 1rem;
+  color: var(--muted);
+}
+
+#counter {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 420px) {
+  h1 { font-size: 1.8rem; }
+  form { flex-direction: column; }
+}
